@@ -24,7 +24,7 @@ def getPossibleList():
 def getAnswer():
   """
   筛选枚举得到的结果，返回答案
-  @return: list
+  :return: list
   """
   getPossibleList()
   # A不知道自己帽子的颜色 -> B和C不可能都是白色帽子

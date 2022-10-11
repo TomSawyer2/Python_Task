@@ -7,9 +7,9 @@ def getMinimumDifference(a, b):
     """
     输入：两个序列a，b，大小都为n，序列元素的值任意整形数
     输出：新的序列a，b
-    @param a: list
-    @param b: list
-    @return: tuple
+    :param a: list
+    :param b: list
+    :return: tuple
     """
     mergedList = a + b
     mergedList.sort()

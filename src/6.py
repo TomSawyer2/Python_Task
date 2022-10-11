@@ -18,10 +18,10 @@ ageList = []  # 所有年龄的组合
 def getAgeList(x, y, z):
     """
     按条件1筛选组合，返回结果
-    @param x: int
-    @param y: int
-    @param z: int
-    @return: list
+    :param x: int
+    :param y: int
+    :param z: int
+    :return: list
     """
     # 条件1：三个孩子的岁数相乘是36 -> 获取所有x * y * z = 36的组合
     temp = []
@@ -37,7 +37,7 @@ def getAgeList(x, y, z):
 def getSum():
     """
     按条件2和3筛选组合，返回结果
-    @return: list
+    :return: list
     """
     # 条件2：三个孩子的岁数相加的结果在条件1中有重复解
     tempList = []
@@ -57,7 +57,7 @@ def getSum():
 def getChildsInfo():
     """
     按条件顺序筛选组合，返回结果
-    @return: list
+    :return: list
     """
     for p1 in originAgeList:
         for p2 in originAgeList:

@@ -4,7 +4,7 @@ import math
 def getPi():
     """
     运用Monte Carno方法计算圆周率的近似值
-    @return: float
+    :return: float
     """
     count = 0
     n = 10000000

@@ -6,11 +6,11 @@ def moveOneStep(n, a, b, c):
     """
     输入：n个盘子，a柱子，b柱子，c柱子
     输出：将n个盘子从a柱子移动到c柱子的过程
-    @param n: int
-    @param a: str
-    @param b: str
-    @param c: str
-    @return: None
+    :param n: int
+    :param a: str
+    :param b: str
+    :param c: str
+    :return: None
     """ 
     if n == 1:
         print(a, '-->', c)

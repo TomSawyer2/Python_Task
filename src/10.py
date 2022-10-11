@@ -5,9 +5,9 @@
 def judgeConflict(state, nextColumn):
     """
     判断目前棋盘上的状态是否符合题意
-    @param state: tuple 每一行中皇后所在的位置
-    @param nextColumn: int 下一行的列坐标
-    @return: boolean
+    :param state: tuple 每一行中皇后所在的位置
+    :param nextColumn: int 下一行的列坐标
+    :return: boolean
     """
     nextRow = rows = len(state)
     for row in range(rows):
@@ -20,9 +20,9 @@ def judgeConflict(state, nextColumn):
 def queens(num, state = ()):
     """
     回溯算法计算每一种结果
-    @param num: int 皇后的数量
-    @param state: int 列坐标
-    @return: None
+    :param num: int 皇后的数量
+    :param state: int 列坐标
+    :return: None
     """
     for pos in range(num):
         if not judgeConflict(state, pos):
@@ -37,8 +37,8 @@ def queens(num, state = ()):
 def printInFormat(solution):
     """
     格式化显示棋盘
-    @param solution: tuple 结果
-    @return: None
+    :param solution: tuple 结果
+    :return: None
     """
     def line(pos, length = len(solution)):
         return '·' * (pos) + 'X' + '·' * (length - pos - 1)
