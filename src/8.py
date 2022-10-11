@@ -15,7 +15,7 @@ def getPossibleList():
   """
   枚举所有情况
   """
-  # 0:红帽子 1:白帽子
+  # 0-红帽子 1-白帽子
   for a in range(2):
       for b in range(2):
           for c in range(2):
@@ -24,13 +24,22 @@ def getPossibleList():
 def getAnswer():
   """
   筛选枚举得到的结果，返回答案
-  @return list
+  @return: list
   """
   getPossibleList()
   # A不知道自己帽子的颜色 -> B和C不可能都是白色帽子
-  possibleList[:] = [x for x in possibleList if x[1] != x[2]]
-  # B不知道自己帽子的颜色 -> A和C不可能都是白色帽子
-  possibleList[:] = [x for x in possibleList if x[0] != x[2]]
-  print(possibleList)
+  possibleList[:] = [x for x in possibleList if x[1] != x[2] or (x[1] == x[2] and x[1] == 0)]
 
-getAnswer()
+  # B不知道自己帽子的颜色 -> A和C不可能都是白色帽子
+  possibleList[:] = [x for x in possibleList if x[0] != x[2] or (x[0] == x[2] and x[0] == 0)]
+
+  # C知道自己帽子的颜色 -> A和B不可能都是白色帽子
+  possibleList[:] = [x for x in possibleList if x[0] != x[1] or (x[0] == x[1] and x[0] == 0)]
+  # 同时易得A和B都不可能带白帽子，否则AB中任何一人都可以判断
+  possibleList[:] = [x for x in possibleList if x[0] != 1 and x[1] != 1]
+  # 此外，C也不可能带白帽子，否则C可以判断
+  possibleList[:] = [x for x in possibleList if x[2] != 1]
+
+  return possibleList
+
+print(getAnswer()[0].__str__() + "（0-红帽子 1-白帽子）")

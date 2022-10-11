@@ -5,8 +5,8 @@
 
 def getMinimumDifference(a, b):
     """
-    输入两个序列a，b，大小都为n，序列元素的值任意整形数
-    返回新的序列a，b
+    输入：两个序列a，b，大小都为n，序列元素的值任意整形数
+    输出：新的序列a，b
     @param a: list
     @param b: list
     @return: tuple
