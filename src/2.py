@@ -2,6 +2,8 @@ def getJumpCounts(n):
     """
     输入台阶数，返回跳法数
     只用最近两个台阶的跳法数，空间复杂度O(1)
+    @param n: int
+    @return: int
     """
     a, b = 1, 1
 
